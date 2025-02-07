@@ -12,4 +12,4 @@ st.image(image,width=250)
 # データ分析
 df = pd.read_csv('saiten.csv',index_col='日')
 st.line_chart(df)
-st.dataframe(df)
+st.dataframe(df.style.highlight_max(axis=0))
