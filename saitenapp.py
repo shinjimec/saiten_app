@@ -15,7 +15,7 @@ df = pd.read_csv('saiten.csv',index_col='日')
 st.line_chart(df)
 st.dataframe(df.style.highlight_max(axis=0), height=200)
 
-st.caption('★採点サービスの大学別の入力状況です。2025年2月11日時点')
+st.caption('★採点サービスの大学別の入力状況です。2025年2月12日時点')
 # データ分析
 df2 = pd.read_excel('saitenuni.xlsx',index_col='大学', dtype='object')
 st.dataframe(df2, width=600, height=3250)
