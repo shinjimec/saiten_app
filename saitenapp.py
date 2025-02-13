@@ -13,7 +13,8 @@ st.image(image,width=250)
 # データ分析
 df = pd.read_csv('saiten.csv',index_col='日')
 st.line_chart(df)
-st.dataframe(df.style.highlight_max(axis=0), height=200)
+sort_df = df.sort_values(by="日", ascending=False)
+st.dataframe(sort_df.style.highlight_max(axis=0), height=200)
 
 st.caption('★採点サービスの大学別の入力状況です。2025年2月13日時点')
 # データ分析
