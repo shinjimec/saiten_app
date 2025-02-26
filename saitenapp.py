@@ -16,7 +16,7 @@ st.line_chart(df)
 sort_df = df.sort_values(by="日", ascending=False)
 st.dataframe(sort_df.style.highlight_max(axis=0), height=200)
 
-st.caption('★採点サービスの大学別の入力状況です。2025年2月25日 AM 9:00 時点')
+st.caption('★採点サービスの大学別の入力状況です。2025年2月26日 AM 9:00 時点')
 # データ分析
 df2 = pd.read_excel('saitenuni.xlsx',index_col='大学', dtype='object')
 st.dataframe(df2, width=600, height=3250)
