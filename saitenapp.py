@@ -11,7 +11,7 @@ image = Image.open('mec_saiten.jpg')
 st.image(image, width=250)
 
 # 年度選択メニュー（サイドバー）
-year = st.sidebar.selectbox("年度を選択してください", ["2023", "2024", "2025"])
+year = st.sidebar.selectbox("年度を選択してください", ["2025", "2024"])
 
 # 選択された年度に応じたCSVファイルを読み込む
 csv_file = f"saiten_{year}.csv"
