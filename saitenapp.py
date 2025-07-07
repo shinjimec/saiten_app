@@ -19,7 +19,7 @@ try:
     df = pd.read_csv(csv_file, index_col='日')
     st.line_chart(df)
     sort_df = df.sort_values(by="日", ascending=False)
-    st.dataframe(sort_df.style.highlight_max(axis=0), height=200)
+    st.dataframe(sort_df.style.highlight_max(axis=0), height=200, width=100)
 except FileNotFoundError:
     st.error(f"{csv_file} が見つかりません。該当年度のデータが存在しない可能性があります。")
 
