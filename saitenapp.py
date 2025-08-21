@@ -4,7 +4,6 @@ import pandas as pd
 import openpyxl
 
 st.title('採点サービス　ログイン者数推移')
-st.caption('★採点サービスのログイン者数の推移グラフです。2025年1月24日(金)～稼働。')
 
 # 画像表示
 image = Image.open('mec_saiten.jpg')
@@ -14,6 +13,7 @@ st.image(image, width=250)
 year = st.sidebar.selectbox("年度を選択してください", ["2026", "2025"])
 
 # 選択された年度に応じたCSVファイルを読み込む
+st.caption(f'★採点サービスのログイン者数の推移グラフです。{year}年のデータを表示しています。')
 csv_file = f"saiten_{year}.csv"
 try:
     df = pd.read_csv(csv_file, index_col='日')
